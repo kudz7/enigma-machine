@@ -65,10 +65,4 @@ class Enigma(Rotors, Plugboard):
     def reset(self, old_swaps, old_settings):
         self.swaps = old_swaps
         self.settings = old_settings
-    
-a = string.ascii_lowercase
-a = list(a)
-random.shuffle(a)
-s = [tuple(a[i:i+2]) for i in range(0, len(a), 2)]
-e = Enigma(s, a)
         
