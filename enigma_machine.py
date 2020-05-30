@@ -1,13 +1,22 @@
 import random
 import string
 
+#this is the Plugboard class. This takes a list of 2-tuples. Each tuple is the two letters you want to swap together.
 class Plugboard:
     def __init__(self, swaps):
         self.swaps = swaps
-
+#this is the Rotors class. This must be a list of letters (strings). Each letter in the alphabet must be there.
 class Rotors:
     def __init__(self, settings):
         self.settings = settings
+        #error checking, there cannot be any duplicates, nonalpha characters or less than 26 letters
+        if len(settings) != 26:
+            raise Exception("Rotor must have 26 unique letters")
+        if len(settings) != len(set(settings)):
+            raise Exception("Rotor must have 26 unique letters")
+        for i in settings:
+            if i.isalpha() != True:
+                raise Exception("Rotor must have 26 unique letters")
 
 class Enigma(Rotors, Plugboard):
     def __init__(self, swaps, settings):
