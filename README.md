@@ -28,4 +28,4 @@ This object is a child of both Rotors and Plugboard. As an input, it takes three
   
 ### Instructions
 
-Give the enigma object 4 arguments: a plugboard setting (swaps) and three rotor settings. Make sure that both the sender and the receiver know these settings. In order to encrypt the message, use _e.encrypt_input._ The receiver must then use _e.decryt_input_ with the correct swap settings, and rotor settings (in the correct order) on the encrypted message in order to get the original message.
+Give the enigma object 4 arguments: a plugboard setting (swaps) and three rotor settings. Make sure that both the sender and the receiver know these settings. In order to encrypt the message, use _encrypt_input._ The receiver must then use _decryt_input_ with the correct swap settings, and rotor settings (in the correct order) on the encrypted message in order to get the original message.
